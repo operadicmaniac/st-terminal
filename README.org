@@ -26,12 +26,15 @@ st-distroube is my personal build of st that is very heavily patched to add more
   st-workingdir -- adds option to open st at specific directory (ex: st -d /usr/bin)
 * Installing st-distrotube on Arch Linux
 All you need to do is to download the PKGBUILD from this repository.  Then run the following command:
+
 =makepkg -cf=
 
 This will create a file that ends in .pkg.tar.xz (for example, st-distrotube-git-6.2-1-x86_64.pkg.tar.xz).  Then run:
+
 =sudo pacman -U *.pkg.tar.xz=
 
 Alternately, you could also install st-distrotube-git from the AUR using an AUR helper such as yay:
+
 =yay -S st-distrotube-git=
 
 =NOTE:= Installing st-distrotube-git conflicts with the standard st package.  If you already have st installed, you will be asked if you want to remove st and install st-distrotube-git instead.
