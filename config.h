@@ -7,15 +7,13 @@
 /* See LICENSE file for copyright and license details. */
 /* appearance */
 
-/* SauceCodePro Nerd Font Mono must be installed from AUR (nerd-fonts-source-code-pro).
- * Otherwise, your default font will be Hack which is found in the standard
+/* Your default font will be Hack which is found in the standard
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static char *font = "SauceCodePro Nerd Font Mono:pixelsize=15:antialias=true:autohint=true";
-static char *font2[] = {
-	"Hack:pixelsize=15:antialias=true:autohint=true",
-	"JoyPixels:pixelsize=15:antialias=true:autohint=true",
+static char *font = "Hack:pixelsize=14:antialias=true:autohint=true";
+static char *font2[] = { 
+    "JoyPixels:pixelsize=14:antialias=true:autohint=true",
 };
 static int borderpx = 2;
 
