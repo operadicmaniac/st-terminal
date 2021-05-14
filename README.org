@@ -24,6 +24,7 @@ st-distroube is my personal build of st that is very heavily patched to add more
 + st-scrollback-mouse-altscreen -- now you can scroll with just the MouseWhell (no SHIFT required)
 + st-vertcenter -- better vertical alignment of lineszz
   st-workingdir -- adds option to open st at specific directory (ex: st -d /usr/bin)
+
 * Installing st-distrotube on Arch Linux
 All you need to do is to download the PKGBUILD from this repository.  Then run the following command:
 
@@ -33,9 +34,19 @@ This will create a file that ends in .pkg.tar.xz (for example, st-distrotube-git
 
 =sudo pacman -U *.pkg.tar.xz=
 
-Alternately, you could also install st-distrotube-git from the AUR using an AUR helper such as yay:
+Alternatively, you could also install st-distrotube-git from my own personal Arch repository.  To do so, add the following to the end of /etc/pacman.conf :
 
-=yay -S st-distrotube-git=
+#+begin_example
+[dt-arch-repo]
+SigLevel = Optional DatabaseOptional
+Server = https://gitlab.com/dwt1/$repo/-/raw/master/$arch
+#+end_example
+
+Then, sync the repositories and update your system with:
+=sudo pacman -Syyu=
+
+And, then:
+=sudo pacman -S st-distrotube-git=
 
 =NOTE:= Installing st-distrotube-git conflicts with the standard st package.  If you already have st installed, you will be asked if you want to remove st and install st-distrotube-git instead.
 
