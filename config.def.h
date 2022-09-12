@@ -1,19 +1,6 @@
-/*  ____ _____  */
-/* |  _ \_   _|  Derek Taylor (DistroTube) */
-/* | | | || |  	 http://www.youtube.com/c/DistroTube */
-/* | |_| || |  	 http://www.gitlab.com/dwt1/ */
-/* |____/ |_|  	 */ 
-
-/* See LICENSE file for copyright and license details. */
-/* appearance */
-
-/* Your default font will be Hack which is found in the standard
- * Arch repos and is listed as a dependency for this build. JoyPixels is also
- * a hard dependency and makes colored fonts and emojis possible.
- */
-static char *font = "Hack:pixelsize=14:antialias=true:autohint=true";
+static char *font = "JetBrains Mono:pixelsize=13:antialias=true:autohint=true";
 static char *font2[] = { 
-    "JoyPixels:pixelsize=14:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=13:antialias=true:autohint=true",
 };
 static int borderpx = 2;
 
@@ -53,8 +40,7 @@ static unsigned int tripleclicktimeout = 600;
 int allowaltscreen = 1;
 
 /* allow certain non-interactive (insecure) window operations such as:
-   setting the clipboard text */
-int allowwindowops = 0;
+   setting the clipboard text */ int allowwindowops = 0;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
@@ -107,44 +93,39 @@ float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 /* Colorscheme based on the 'Doom One' theme from Doom Emacs */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	"#1c1f24",
-	"#ff6c6b",
-	"#98be65",
-	"#da8548",
-	"#51afef",
-	"#c678dd",
-	"#5699af",
-	"#202328",
+ static const char *colorname[] = {
+    /* 8 normal colors */
+    "#000000", /* black   */
+    "#ff5555", /* red     */
+    "#50fa7b", /* green   */
+    "#f1fa8c", /* yellow  */
+    "#bd93f9", /* blue    */
+    "#ff79c6", /* magenta */
+    "#8be9fd", /* cyan    */
+    "#bbbbbb", /* white   */
+                                  
+    /* 8 bright colors */
+    "#44475a",
+    "#ff5555",
+    "#50fa7b",
+    "#f1fa8c",
+    "#bd93f9",
+    "#ff79c6",
+    "#8be9fd",
+    "#ffffff",
+                                  
+    [255] = 0,
 
-	/* 8 bright colors */
-	"#5b6268",
-	"#da8548",
-	"#4db5bd",
-	"#ecbe7b",
-	"#3071db",
-	"#a9a1e1",
-	"#46d9ff",
-	"#dfdfdf",
+    /* special colors */
+    "#282a36",
+    "#f8f8f2",
+ 
+ };
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#282c34",
-	"#bbc2cf",
-	"#d7d7d7",
-};
-
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 15;
-static unsigned int defaultrcs = 15;
+ unsigned int defaultfg = 257;
+ unsigned int defaultbg = 256;
+ static unsigned int defaultcs = 15;
+ static unsigned int defaultrcs = 15;
 
 /*
  * Default shape of cursor
