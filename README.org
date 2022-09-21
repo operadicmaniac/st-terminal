@@ -11,7 +11,7 @@
 * What is st?
 #+CAPTION: st-distrotube
 #+ATTR_HTML: :alt st-distrotube :title st-distrotube :align left
-[[https://gitlab.com/dwt1/dotfiles/-/raw/master/.screenshots/dotfiles11-thumb.png]]
+
 st is a simple terminal emulator for X which sucks less (st is created by the good folks at https://suckless.org).  The Suckless team created st as an alternative to traditional terminal emulators like xterm and rxvt, which have tens of thousands of lines of code and are quite bloated in comparison to the rather slim st.
 
 * What is st-distrotube
